@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.fit binary
+*.dump binary
+.env export-ignore
+.env.* export-ignore
+.env.example !export-ignore
+node_modules export-ignore
+dist export-ignore
+coverage export-ignore

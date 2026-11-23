@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+coverage/
+.DS_Store
+*.log
+*.pem
+*.key
+*.tsbuildinfo
+.pytest_cache/
+auth-worker/.venv/
+auth-worker/**/__pycache__/
+deploy/

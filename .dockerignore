@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.env
+.env.*
+!.env.example
+coverage
+deploy
+*.log
+.DS_Store
+auth-worker/.venv
+auth-worker/**/__pycache__
+tests

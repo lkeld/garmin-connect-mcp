@@ -1,0 +1,41 @@
+{
+  "name": "garmin-connect-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Privacy-conscious, multi-user Garmin Connect connector for Claude and other MCP clients",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/src/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "check": "npm run typecheck && npm test && npm run build",
+    "secrets": "node scripts/generate-secrets.mjs",
+    "smoke": "node dist/scripts/smoke.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.5",
+    "graphql": "^16.15.0",
+    "helmet": "^8.3.0",
+    "jose": "^6.2.18",
+    "oidc-provider": "^9.15.1",
+    "pg": "^8.16.3",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "@types/oidc-provider": "^9.13.1",
+    "@types/pg": "^8.15.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  }
+}
